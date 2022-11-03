@@ -1,9 +1,11 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+// @Repository // 레포지토리 : 데이터 저장
 public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>(); // 실무에서는 보통 공유되는 값이기 떄문에 사용 ConcurrnetHashMap
